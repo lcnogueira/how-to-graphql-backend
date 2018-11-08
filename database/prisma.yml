@@ -1,0 +1,8 @@
+endpoint: https://us1.prisma.sh/luiz-claudio-a1621e/database/dev
+datamodel: datamodel.graphql
+secret: mysecret123,
+
+# Deploy hook
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
