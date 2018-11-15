@@ -1,6 +1,6 @@
-endpoint: https://us1.prisma.sh/luiz-claudio-a1621e/database/dev
+endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.graphql
-secret: mysecret123,
+secret: ${env:PRISMA_SECRET}
 
 # Deploy hook
 hooks:
