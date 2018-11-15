@@ -1,4 +1,4 @@
-# import Link from "./generated/prisma.graphql"
+# import Link, LinkSubscriptionPayload, Vote from "./generated/prisma.graphql"
 
 type Query {
   info: String!
@@ -12,6 +12,7 @@ type Mutation {
   login(email: String!, password: String!): AuthPayload
   updateLink(id: ID!, url: String, description: String): Link
   deleteLink(id: ID!): Link
+  vote(linkId: ID!): Vote
 }
 
 type User {
@@ -24,4 +25,9 @@ type User {
 type AuthPayload {
   token: String
   user: User
+}
+
+type Subscription {
+  newLink: LinkSubscriptionPayload
+  newVote: VoteSubscriptionPayload
 }
