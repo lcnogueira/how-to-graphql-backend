@@ -33,7 +33,7 @@ When prompted where (i.e. to which Prisma server) you want to deploy your servic
 PRISMA_ENDPOINT=
 ```
 
-4. Start the server and open Playground
+5. Start the server and open Playground
 
 ```
 npm run dev
