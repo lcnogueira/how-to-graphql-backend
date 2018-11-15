@@ -5,6 +5,7 @@ const Mutation = require("./resolvers/Mutation");
 const AuthPayload = require("./resolvers/AuthPayload");
 const Subscription = require("./resolvers/Subscription");
 const Feed = require("./resolvers/Feed");
+require("dotenv").config();
 
 const resolvers = {
   Query,
@@ -20,8 +21,8 @@ const server = new GraphQLServer({
     ...req,
     db: new Prisma({
       typeDefs: "src/generated/prisma.graphql",
-      endpoint: "https://us1.prisma.sh/luiz-claudio-a1621e/database/dev",
-      secret: "mysecret123",
+      endpoint: process.env.PRISMA_ENDPOINT,
+      secret: process.env.PRISMA_SECRET,
       debug: true
     })
   })
