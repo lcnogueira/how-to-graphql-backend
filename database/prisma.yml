@@ -1,6 +1,6 @@
-endpoint: ${env:PRISMA_ENDPOINT}
+endpoint: ""
 datamodel: datamodel.graphql
-secret: ${env:SECRET}
+secret: "secret"
 
 # Deploy hook
 hooks:
